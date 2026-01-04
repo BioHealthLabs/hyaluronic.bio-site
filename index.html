@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Hyaluronic.bio – Evidence-Based Hyaluronic Acid Education (2025)</title>
+  <title>Hyaluronic.bio – Evidence-Based Hyaluronic Acid Education (2026)</title>
   <meta name="description"
-        content="Hyaluronic.bio is a clinical, evidence-based guide to hyaluronic acid. Learn how it works in the skin, how to use it correctly, common mistakes and when to combine it with other actives." />
+        content="Clinical, evidence-based guidance on hyaluronic acid (HA): how it works, how to use it correctly, common mistakes, and transparent product shortcuts for hydration routines." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://hyaluronic.bio/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Hyaluronic.bio – Clinical Hyaluronic Acid Education" />
   <meta property="og:description"
-        content="Independent, science-based information on hyaluronic acid and hydration. Understand this key ingredient before you buy anything." />
+        content="Independent, evidence-based information on hyaluronic acid and hydration. Learn the science, avoid common mistakes — with transparent product shortcuts." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hyaluronic.bio/" />
   <meta property="og:image" content="https://hyaluronic.bio/og-image-hyaluronic-bio.jpg" />
@@ -25,7 +25,7 @@
     "@type": "WebSite",
     "name": "Hyaluronic.bio",
     "url": "https://hyaluronic.bio/",
-    "description": "Independent, evidence-based information about hyaluronic acid and hydration.",
+    "description": "Independent, evidence-based information about hyaluronic acid and hydration routines.",
     "publisher": {
       "@type": "Organization",
       "name": "ronarn AS",
@@ -45,31 +45,31 @@
         "name": "What does hyaluronic acid actually do in the skin?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Hyaluronic acid is a humectant – a water-binding molecule that helps skin hold on to moisture. In skincare, it attracts and retains water in the upper layers of the skin, improving plumpness and comfort when used with a moisturiser."
+          "text": "Hyaluronic acid is a humectant: a water-binding molecule that helps the upper layers of skin hold onto water. In skincare, it improves surface hydration and comfort when paired with a moisturiser."
         }
       },
       {
         "@type": "Question",
-        "name": "Can hyaluronic acid dry out my skin?",
+        "name": "Can hyaluronic acid make my skin feel drier?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It can feel that way if you apply it on completely dry skin and skip moisturiser on top. For best results, apply HA to slightly damp skin and always follow with a cream to trap the water inside the skin."
+          "text": "It can feel that way if you apply HA on completely dry skin and skip moisturiser on top. For best results, apply to slightly damp skin and seal with a moisturiser."
         }
       },
       {
         "@type": "Question",
-        "name": "Can I use hyaluronic acid with retinol and vitamin C?",
+        "name": "Do I still need moisturiser if I use a hyaluronic serum?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Hyaluronic acid usually pairs very well with retinoids and vitamin C. It is often used as a hydrating buffer underneath stronger actives to improve tolerance and comfort."
+          "text": "Yes. Hyaluronic acid is not a complete moisturiser. You still need a moisturiser to lock hydration in and support the barrier."
         }
       },
       {
         "@type": "Question",
-        "name": "Do I still need a moisturiser if I use a hyaluronic serum?",
+        "name": "Can I use hyaluronic acid with vitamin C or retinoids?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Hyaluronic acid is not a full moisturiser – it is one hydrating component. You still need a moisturiser or cream on top to seal in hydration and support the skin barrier."
+          "text": "Generally yes. HA pairs well with most actives and is often used to improve comfort and tolerance in routines that include vitamin C or retinoids."
         }
       }
     ]
@@ -86,324 +86,680 @@
   </script>
 
   <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Page-specific styling (kept isolated) -->
+  <style>
+    /* ===== Header: match Retinol.bio / Retynol.com feel ===== */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0 14px;
+      border-bottom: 1px solid rgba(15,23,42,0.08);
+    }
+    .brand-left { display: flex; flex-direction: column; gap: 2px; }
+    .brand-name {
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      font-size: 1.15rem;
+      line-height: 1.1;
+    }
+    .brand-tagline {
+      color: rgba(15,23,42,0.72);
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+    .trust-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .trust-tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: rgba(15,23,42,0.03);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 0.86rem;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    /* ===== Jump nav pills ===== */
+    .jump-nav {
+      position: static;
+      z-index: 60;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 999px;
+      padding: 10px 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 14px 0 18px;
+    }
+    .jump-nav a {
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: rgba(15,23,42,0.03);
+    }
+    .jump-nav a:hover {
+      border-color: rgba(236,72,153,0.35);
+      background: rgba(236,72,153,0.06);
+    }
+
+    /* ===== Hero ===== */
+    .hero-edu {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: #fff;
+    }
+    .hero-kicker {
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: rgba(15,23,42,0.60);
+      margin: 0 0 8px;
+    }
+    .hero-title {
+      margin: 0 0 10px;
+      font-size: 2.05rem;
+      line-height: 1.1;
+      letter-spacing: -0.4px;
+    }
+    .hero-subtitle {
+      margin: 0 0 12px;
+      color: rgba(15,23,42,0.75);
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+    .hero-list {
+      margin: 0 0 14px;
+      padding-left: 18px;
+      color: rgba(15,23,42,0.78);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 6px;
+    }
+    .hero-note {
+      margin: 10px 0 0;
+      color: rgba(15,23,42,0.70);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .clinic-card {
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(15,23,42,0.02);
+    }
+    .clinic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: rgba(15,23,42,0.03);
+      font-weight: 850;
+      font-size: 0.86rem;
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+    .clinic-list { margin: 0; padding-left: 18px; color: rgba(15,23,42,0.78); }
+    .clinic-disclaimer {
+      margin: 10px 0 0;
+      font-size: 0.86rem;
+      color: rgba(15,23,42,0.70);
+      line-height: 1.45;
+    }
+
+    /* ===== Product picks (NO TABLE) ===== */
+    .picks {
+      margin: 18px 0 22px;
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 20px;
+      background: #fff;
+      padding: 16px;
+    }
+    .picks h2 { margin: 0 0 6px; }
+    .picks p { margin: 0 0 14px; color: rgba(15,23,42,0.72); }
+    .picks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .pick-card {
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(15,23,42,0.02);
+    }
+    .pick-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(236,72,153,0.35);
+      background: rgba(236,72,153,0.08);
+      font-weight: 850;
+      font-size: 0.84rem;
+      margin-bottom: 10px;
+    }
+    .pick-title { margin: 0 0 6px; font-size: 1.05rem; }
+    .pick-desc { margin: 0 0 12px; color: rgba(15,23,42,0.75); line-height: 1.45; }
+    .pick-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .pick-sub { margin-top: 8px; font-size: 0.84rem; color: rgba(15,23,42,0.65); }
+
+    .anchor-offset { scroll-margin-top: 92px; }
+
+    @media (max-width: 860px) {
+      .hero-edu { grid-template-columns: 1fr; }
+      .hero-title { font-size: 1.75rem; }
+    }
+    @media (max-width: 560px) {
+      .jump-nav { top: 6px; padding: 8px 10px; gap: 8px; }
+      .jump-nav a { font-size: 0.88rem; padding: 7px 10px; }
+    }
+  </style>
 </head>
+
 <body>
 <div class="page">
 
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="brand">
-      <div class="brand-mark">
-        <span class="brand-dot"></span>
-        <span class="brand-text">Hyaluronic.bio</span>
-      </div>
-      <div class="brand-tagline">
-        Clinical, evidence-based education on hyaluronic acid and hydration. No sponsorships. No fluff.
-      </div>
+  <header class="topbar">
+    <div class="brand-left">
+      <div class="brand-name">Hyaluronic.bio</div>
+      <div class="brand-tagline">Clinical, evidence-based hydration education — with transparent product shortcuts.</div>
     </div>
-
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="#ha-basics">Basics</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#routine">Routine</a>
-      <a href="#mistakes">Common mistakes</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://hylaronic.com/" class="nav-cta" target="_blank" rel="noopener">
-        Compare products at Hylaronic.com
-      </a>
-    </nav>
+    <div class="trust-tags" aria-label="Trust markers">
+      <span class="trust-tag">Evidence-based</span>
+      <span class="trust-tag">Independent</span>
+      <span class="trust-tag">Affiliate-disclosed</span>
+    </div>
   </header>
 
+  <!-- Jump nav -->
+  <nav class="jump-nav" aria-label="Jump navigation">
+    <a href="#ha-101" data-track="jump" data-placement="jump_nav" data-label="basics">Basics</a>
+    <a href="#how-it-works" data-track="jump" data-placement="jump_nav" data-label="how_it_works">How it works</a>
+    <a href="#product-picks" data-track="jump" data-placement="jump_nav" data-label="picks">Product picks</a>
+    <a href="#routine" data-track="jump" data-placement="jump_nav" data-label="routine">Routine</a>
+    <a href="#mistakes" data-track="jump" data-placement="jump_nav" data-label="mistakes">Common mistakes</a>
+    <a href="#faq" data-track="jump" data-placement="jump_nav" data-label="faq">FAQ</a>
+    <a href="https://hylaronic.com/" target="_blank" rel="noopener"
+       data-track="outbound" data-placement="jump_nav" data-label="hylaronic_compare">
+      Compare products at Hylaronic.com
+    </a>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero hero-clinical" aria-labelledby="hero-heading">
-    <div class="hero-main">
+  <section class="hero-edu" aria-labelledby="hero-heading">
+    <div>
       <p class="hero-kicker">Clinical Hydration Education</p>
       <h1 id="hero-heading" class="hero-title">
-        Understand hyaluronic acid before you let it reshape your routine.
+        Learn hyaluronic acid properly — before you buy anything.
       </h1>
       <p class="hero-subtitle">
-        Hyaluronic acid is one of the most hyped ingredients in skincare – and also one of the most misunderstood.
-        Used correctly, it can improve comfort, plumpness and glow. Used poorly, it can feel sticky, pointless
-        or even make dryness seem worse.
+        Hyaluronic acid (HA) can make skin feel comfortable, flexible and more “plump” — but it’s often misused.
+        This page explains what HA actually does, why some formulas feel sticky or pointless, and how to use it
+        so hydration improves instead of backfiring.
       </p>
-
       <ul class="hero-list">
-        <li>What hyaluronic acid really does in the skin – beyond marketing claims.</li>
-        <li>Why “multi-molecular” formulas matter and when they don’t.</li>
-        <li>How to build a routine that uses HA without sacrificing your barrier.</li>
+        <li>Understand HA molecular weights (high vs low) and what “multi-molecular” really means.</li>
+        <li>Use it correctly: damp skin, correct amount, seal with moisturiser.</li>
+        <li>Fix common problems: stickiness, pilling, “I feel drier” complaints.</li>
       </ul>
 
       <div class="hero-actions">
-        <a href="#ha-basics" class="btn-primary">
-          Start with Hyaluronic 101
-          <span class="chevron">›</span>
+        <a href="#ha-101" class="btn-primary" data-track="jump" data-placement="hero" data-label="start_basics">
+          Start with Hyaluronic 101 <span class="chevron">›</span>
         </a>
-        <a href="https://hylaronic.com/" class="btn-secondary" target="_blank" rel="noopener">
-          Go to Hylaronic.com product comparison
+        <a href="#product-picks" class="btn-secondary" data-track="jump" data-placement="hero" data-label="to_picks">
+          See product picks
+        </a>
+        <a href="https://hylaronic.com/" class="btn-secondary" target="_blank" rel="noopener"
+           data-track="outbound" data-placement="hero" data-label="hylaronic_compare">
+          Go to Hylaronic.com comparison
         </a>
       </div>
 
       <p class="hero-note">
-        This site is for education only. When you are ready to evaluate specific products,
-        visit our independent comparison hub at <strong>Hylaronic.com</strong>.
+        Disclosure: this educational site includes <strong>clearly marked affiliate links</strong> in the product picks section.
+        Rankings are independent and not for sale.
       </p>
     </div>
 
-    <aside class="hero-aside hero-aside-card" aria-label="Hydration summary">
-      <div class="clinic-badge">
-        <span class="clinic-dot"></span>
-        Evidence-based · Independent · Affiliate-free
-      </div>
-      <div class="clinic-metric">
-        <div class="clinic-label">Typical goals for visitors</div>
-        <div class="clinic-value">Less tightness, more comfortable skin, better glow</div>
-      </div>
-      <div class="clinic-divider"></div>
+    <aside class="clinic-card" aria-label="Clinical summary">
+      <div class="clinic-badge">Evidence-based · Independent · Practical</div>
       <ul class="clinic-list">
-        <li><strong>1–2 weeks:</strong> skin often feels more flexible and less tight.</li>
-        <li><strong>1–3 months:</strong> better tolerance of actives like retinoids and acids.</li>
-        <li><strong>Always:</strong> HA works best when paired with a moisturiser and SPF.</li>
+        <li><strong>Same-day:</strong> comfort and “plump” feel can improve quickly.</li>
+        <li><strong>1–3 weeks:</strong> less tightness when used correctly with moisturiser.</li>
+        <li><strong>Always:</strong> HA works best when sealed with a moisturiser and paired with SPF.</li>
       </ul>
       <p class="clinic-disclaimer">
-        Not medical advice. Talk to your own doctor or dermatologist about your skin.
+        Not medical advice. Persistent rashes, swelling, or severe burning require clinician guidance.
       </p>
     </aside>
   </section>
 
-  <!-- MAIN CONTENT -->
   <main class="article">
 
-    <!-- BASICS -->
-    <section id="ha-basics" class="card">
+    <!-- HA 101 -->
+    <section id="ha-101" class="card anchor-offset">
       <h2>Hyaluronic Acid 101 – What It Is and Why It Matters</h2>
       <p>
-        Hyaluronic acid (HA) is a molecule naturally found in the skin, eyes and joints. Its main job is to
-        <strong>bind water</strong> and keep tissues cushioned and hydrated. In skincare, we use topical HA to
-        pull water into the upper layers of the skin and improve surface hydration.
+        Hyaluronic acid (HA) is a molecule found naturally in skin, eyes and joints. Its role is to
+        <strong>bind water</strong> and keep tissues cushioned and hydrated. In skincare, topical HA primarily
+        improves <strong>surface hydration</strong> and comfort.
       </p>
       <p>
-        HA itself is not an exfoliant or anti-ageing active like retinoids or acids. Think of it as a
-        <strong>supporting player</strong> that makes your skin more comfortable and resilient so other steps
-        can do their job better.
+        HA is not a “strong active” like retinoids or exfoliating acids. Think of it as a
+        <strong>hydration support tool</strong> that helps your skin barrier function better so other steps
+        (like SPF, retinoids, vitamin C) are easier to tolerate.
       </p>
 
       <div class="grid grid-2">
         <div class="card-ghost">
-          <h3>What hyaluronic acid can realistically do</h3>
+          <h3>What HA can realistically do</h3>
           <ul>
             <li>Improve surface hydration and flexibility.</li>
-            <li>Make skin feel less tight or “crinkly” after cleansing.</li>
-            <li>Help makeup sit more smoothly over dry areas.</li>
-            <li>Support long-term tolerance of stronger actives.</li>
+            <li>Reduce tight feeling after cleansing.</li>
+            <li>Help makeup sit more smoothly over dry patches.</li>
+            <li>Support comfort in routines that use actives.</li>
           </ul>
         </div>
         <div class="card-ghost">
-          <h3>What hyaluronic acid cannot do alone</h3>
+          <h3>What HA cannot do alone</h3>
           <ul>
             <li>Replace a moisturiser or SPF.</li>
-            <li>Erase deep wrinkles or lift sagging.</li>
-            <li>Fix barrier damage without other supporting ingredients.</li>
-            <li>Work without enough water in the routine (no cream, no hydration).</li>
+            <li>“Fix” deep wrinkles or lift sagging.</li>
+            <li>Repair a damaged barrier without other support.</li>
+            <li>Work well if you apply it on dry skin and skip a cream.</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="card">
+    <section id="how-it-works" class="card anchor-offset">
       <h2>How Hyaluronic Acid Works in the Skin</h2>
       <p>
-        Hyaluronic acid is a <em>humectant</em> – it binds water like a sponge. Different “molecular weights”
-        (sizes) of HA sit at different depths:
+        HA is a <em>humectant</em>: it binds water like a sponge. In formulas you’ll see different “molecular weights”
+        (sizes). This mostly affects texture and where the ingredient sits:
       </p>
 
       <div class="grid grid-3">
         <div class="mini-card">
           <h3>High molecular weight</h3>
           <p>
-            Sits closer to the surface. Great for immediate plumping and smoothing, but can feel sticky if
-            used alone or in high amounts.
+            Sits closer to the surface. Great for immediate smoothing, but can feel tacky if used heavily.
           </p>
         </div>
         <div class="mini-card">
           <h3>Mid molecular weight</h3>
           <p>
-            Balances surface plumpness with slightly deeper hydration. Often used in daily serums for most
-            skin types.
+            Often the sweet spot for daily serums: hydrating without feeling like a film.
           </p>
         </div>
         <div class="mini-card">
           <h3>Low molecular weight</h3>
           <p>
-            Penetrates a bit deeper. Can improve longer-lasting comfort, but may be irritating for very
-            reactive skin if overused.
+            Smaller fragments may feel “deeper”, but reactive skin can dislike certain low-weight blends.
           </p>
         </div>
       </div>
 
       <p class="inline-note">
-        Multi-molecular HA serums combine several sizes to cover both surface and slightly deeper layers.
-        For product comparisons, see:
-        <a href="https://hylaronic.com/" target="_blank" rel="noopener">
+        If you want shopping-style comparisons and real product examples, use:
+        <a href="https://hylaronic.com/" target="_blank" rel="noopener" data-track="outbound" data-placement="how_it_works" data-label="hylaronic_compare">
           Hylaronic.com – Independent product comparison
         </a>.
       </p>
     </section>
 
-    <!-- ROUTINE -->
-    <section id="routine" class="card">
-      <h2>How to Use Hyaluronic Acid in a Routine</h2>
+    <!-- PRODUCT PICKS (HA) -->
+    <section id="product-picks" class="picks anchor-offset" aria-labelledby="picks-heading">
+      <h2 id="picks-heading">Recommended product picks (hyaluronic acid)</h2>
       <p>
-        HA is flexible – it can be used morning or night. The key is to pair it with enough water and
-        something to seal that water in.
+        If you want practical shortcuts, these are widely used options with clear positioning. Links may earn a commission
+        at no extra cost to you. No paid rankings.
+      </p>
+
+      <div class="picks-grid">
+
+        <article class="pick-card" aria-labelledby="pick-cerave">
+          <div class="pick-pill">Pick: Best for dry/tight skin</div>
+          <h3 id="pick-cerave" class="pick-title">CeraVe Hydrating Hyaluronic Acid Serum</h3>
+          <p class="pick-desc">
+            A creamy, comfortable HA serum with barrier-friendly support. Great if you want hydration without fragrance overload.
+          </p>
+          <div class="pick-actions">
+            <a class="btn-primary"
+               href="https://www.amazon.com/dp/B07T9VVGQG?tag=genecticscom-20"
+               target="_blank" rel="nofollow sponsored noopener"
+               data-track="affiliate" data-placement="picks" data-label="cerave_ha" data-product="cerave_ha_serum" data-destination="amazon">
+              Check price <span class="chevron">›</span>
+            </a>
+            <a class="btn-secondary"
+               href="https://hylaronic.com/#cerave-ha"
+               target="_blank" rel="noopener"
+               data-track="outbound" data-placement="picks" data-label="cerave_compare">
+              Compare on Hylaronic.com
+            </a>
+          </div>
+          <div class="pick-sub">Use 2–4 drops on slightly damp skin, then seal with moisturiser.</div>
+        </article>
+
+        <article class="pick-card" aria-labelledby="pick-ordinary">
+          <div class="pick-pill">Pick: Budget/value</div>
+          <h3 id="pick-ordinary" class="pick-title">The Ordinary Hyaluronic Acid 2% + B5</h3>
+          <p class="pick-desc">
+            Popular, affordable, and widely available. Some feel mild tackiness — using less usually fixes that.
+          </p>
+          <div class="pick-actions">
+            <a class="btn-primary"
+               href="https://www.amazon.com/dp/B071DVC3CF?tag=genecticscom-20"
+               target="_blank" rel="nofollow sponsored noopener"
+               data-track="affiliate" data-placement="picks" data-label="ordinary_ha" data-product="ordinary_ha_2_b5" data-destination="amazon">
+              Check price <span class="chevron">›</span>
+            </a>
+            <a class="btn-secondary"
+               href="https://hylaronic.com/#ordinary-ha"
+               target="_blank" rel="noopener"
+               data-track="outbound" data-placement="picks" data-label="ordinary_compare">
+              Compare on Hylaronic.com
+            </a>
+          </div>
+          <div class="pick-sub">If it pills: reduce amount, wait 30–60 seconds, then moisturiser.</div>
+        </article>
+
+        <article class="pick-card" aria-labelledby="pick-lrp">
+          <div class="pick-pill">Pick: Plump feel + fine lines</div>
+          <h3 id="pick-lrp" class="pick-title">La Roche-Posay Hyalu B5 Serum</h3>
+          <p class="pick-desc">
+            A “bouncy” gel texture with supportive ingredients. Good when you want hydration plus a smoother look.
+          </p>
+          <div class="pick-actions">
+            <a class="btn-primary"
+               href="https://www.amazon.com/dp/B01M3TQG23?tag=genecticscom-20"
+               target="_blank" rel="nofollow sponsored noopener"
+               data-track="affiliate" data-placement="picks" data-label="lrp_hyalu_b5" data-product="lrp_hyalu_b5" data-destination="amazon">
+              Check price <span class="chevron">›</span>
+            </a>
+            <a class="btn-secondary"
+               href="https://hylaronic.com/#lrp-hyalu-b5"
+               target="_blank" rel="noopener"
+               data-track="outbound" data-placement="picks" data-label="lrp_compare">
+              Compare on Hylaronic.com
+            </a>
+          </div>
+          <div class="pick-sub">Best under moisturiser; don’t stack 3+ hydrating serums.</div>
+        </article>
+
+        <article class="pick-card" aria-labelledby="pick-vichy">
+          <div class="pick-pill">Pick: Best for layering</div>
+          <h3 id="pick-vichy" class="pick-title">Vichy Minéral 89 Hyaluronic Acid Booster</h3>
+          <p class="pick-desc">
+            Light, fast-absorbing hydration. Good if you hate heavy textures and want something easy under SPF/makeup.
+          </p>
+          <div class="pick-actions">
+            <a class="btn-primary"
+               href="https://www.amazon.com/dp/B01K0O9MXI?tag=genecticscom-20"
+               target="_blank" rel="nofollow sponsored noopener"
+               data-track="affiliate" data-placement="picks" data-label="vichy_89" data-product="vichy_mineral_89" data-destination="amazon">
+              Check price <span class="chevron">›</span>
+            </a>
+            <a class="btn-secondary"
+               href="https://hylaronic.com/#vichy-89"
+               target="_blank" rel="noopener"
+               data-track="outbound" data-placement="picks" data-label="vichy_compare">
+              Compare on Hylaronic.com
+            </a>
+          </div>
+          <div class="pick-sub">Apply thinly; too much makes any HA feel sticky.</div>
+        </article>
+
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3 style="margin-top:0;">Want the full product comparison?</h3>
+        <p style="margin-bottom:10px;">
+          Hylaronic.com is the shopping hub with side-by-side comparisons, texture notes and more product coverage.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary"
+             href="https://hylaronic.com/"
+             target="_blank" rel="noopener"
+             data-track="outbound" data-placement="picks_cta" data-label="hylaronic_compare">
+            Go to Hylaronic.com comparison <span class="chevron">›</span>
+          </a>
+          <a class="btn-secondary"
+             href="https://hylaronic.com/best-for-beginners.html"
+             target="_blank" rel="noopener"
+             data-track="outbound" data-placement="picks_cta" data-label="hylaronic_beginners">
+            Best for beginners
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROUTINE -->
+    <section id="routine" class="card anchor-offset">
+      <h2>How to Use Hyaluronic Acid Correctly (Simple Routine)</h2>
+      <p>
+        Most problems come from using HA like a moisturiser (it’s not), or applying it to dry skin and skipping a cream on top.
+        This is the low-drama way to do it.
       </p>
 
       <ol class="numbered">
         <li><strong>Cleanse:</strong> use a gentle, non-stripping cleanser.</li>
-        <li><strong>Hydrate:</strong> while skin is still slightly damp, apply a hyaluronic serum.</li>
-        <li><strong>Seal:</strong> follow with a moisturiser to lock in the water.</li>
-        <li><strong>Protect (day):</strong> finish with broad-spectrum SPF 30 or higher.</li>
+        <li><strong>Hydrate:</strong> apply HA on <strong>slightly damp</strong> skin (not bone dry).</li>
+        <li><strong>Seal:</strong> follow with a moisturiser to trap water in the skin.</li>
+        <li><strong>Protect (day):</strong> finish with broad-spectrum SPF 30+.</li>
+        <li><strong>Amount:</strong> 2–4 drops is enough. More usually equals stickier.</li>
       </ol>
 
-      <p>
-        If a product feels very sticky, try using less, applying to damp (not wet) skin, or layering it
-        underneath a richer moisturiser.
-      </p>
-
-      <p>
-        For beginner-friendly product examples, see
-        <a href="https://hylaronic.com/" target="_blank" rel="noopener">
-          Hylaronic.com – Best hyaluronic serums
+      <p class="inline-note">
+        Prefer product-specific beginner options? Use:
+        <a href="https://hylaronic.com/best-for-beginners.html" target="_blank" rel="noopener"
+           data-track="outbound" data-placement="routine" data-label="beginners_hylaronic">
+          Hylaronic.com – Best hyaluronic serums for beginners
         </a>.
       </p>
     </section>
 
     <!-- MISTAKES -->
-    <section id="mistakes" class="card">
-      <h2>Common Mistakes with Hyaluronic Acid</h2>
+    <section id="mistakes" class="card anchor-offset">
+      <h2>Common Mistakes (and Quick Fixes)</h2>
       <p>
-        Most “HA doesn’t work for me” stories come down to one of a few simple mistakes.
+        Most “HA doesn’t work” experiences map to one of these. The fix is usually simple.
       </p>
 
       <div class="grid grid-2">
         <div class="card-ghost">
           <h3>Often manageable</h3>
           <ul>
-            <li>Using too much product so it feels sticky.</li>
-            <li>Layering multiple HA serums for no real benefit.</li>
-            <li>Applying on bone-dry skin without any mist or moisture.</li>
+            <li><strong>Sticky feel:</strong> you used too much, or layered too many hydrators.</li>
+            <li><strong>Pilling:</strong> too many layers, or not enough dry-down time.</li>
+            <li><strong>Feels pointless:</strong> you didn’t seal with moisturiser.</li>
           </ul>
         </div>
         <div class="card-ghost">
           <h3>Warning signs – adjust or stop</h3>
           <ul>
-            <li>Tightness or dryness that gets worse over time, not better.</li>
-            <li>Stinging or redness whenever you apply HA products.</li>
-            <li>New breakouts clearly linked to a heavy, film-forming formula.</li>
+            <li>Persistent stinging/redness with HA products.</li>
+            <li>Dryness that worsens over time (not just one day).</li>
+            <li>Breakouts clearly linked to a heavy, film-forming formula.</li>
           </ul>
         </div>
       </div>
 
       <p class="inline-note">
-        For more detail, see:
-        <a href="/side-effects.html">Hyaluronic Acid Side Effects &amp; common mistakes</a>.
+        For a deeper troubleshooting guide, read:
+        <a href="https://hylaronic.com/side-effects.html" target="_blank" rel="noopener"
+           data-track="outbound" data-placement="mistakes" data-label="side_effects_hylaronic">
+          Hylaronic.com – Hyaluronic side effects & mistakes
+        </a>.
+      </p>
+
+      <p class="legal-note">
+        This page is for general information only and is not medical advice. Talk to a clinician if you have severe swelling,
+        hives, or persistent burning.
       </p>
     </section>
 
-    <!-- FAQ BLOCK -->
-    <section id="faq" class="card faq">
+    <!-- FAQ -->
+    <section id="faq" class="card faq anchor-offset">
       <h2 class="section-title">Hyaluronic Acid FAQ</h2>
 
       <h3>Can oily or acne-prone skin use hyaluronic acid?</h3>
       <p>
-        Yes. HA itself is not oily or comedogenic. Oily and acne-prone skin often benefits from light,
-        water-based hydration, as long as the full formula is non-comedogenic and not heavily fragranced.
+        Generally yes. HA itself is not oily. Breakouts usually come from the overall formula (occlusives, fragrance),
+        not HA as an ingredient.
       </p>
 
       <h3>Is “purging” a thing with hyaluronic acid?</h3>
       <p>
-        No. Purging is related to actives that speed up cell turnover (like retinoids and some acids).
-        HA should not cause purging. If you see breakouts, it is more likely a reaction to the overall
-        formula (fragrance, occlusives) rather than the HA itself.
+        No. Purging is linked to actives that increase cell turnover (like retinoids). If you break out, it’s more likely
+        a formula reaction or layering issue.
       </p>
 
       <h3>Can I combine hyaluronic acid with niacinamide, vitamin C or peptides?</h3>
       <p>
-        Generally yes. HA plays well with most other skincare ingredients and is often used as a
-        hydrating base layer under niacinamide, vitamin C and peptide serums.
+        Generally yes. HA is commonly used as a hydrating layer under many other ingredients.
+      </p>
+
+      <p style="font-size: 12px; color: rgba(15,23,42,0.65); margin-top: 16px;">
+        This content is for general information only and is not medical advice.
       </p>
     </section>
 
-    <!-- CTA → HYLARONIC.COM -->
-    <section class="card cta-clinical">
-      <div class="cta-clinic-text">
-        <h2>Ready to choose a serum?</h2>
-        <p>
-          Hyaluronic.bio is designed to help you understand how HA works. When you feel confident about
-          the basics and want to compare real formulas, textures and prices, head over to our independent
-          comparison hub.
-        </p>
-      </div>
-      <div class="cta-clinic-action">
-        <a href="https://hylaronic.com/" class="btn-primary btn-full" target="_blank" rel="noopener">
-          Go to Hylaronic.com – Independent hyaluronic comparison
-          <span class="chevron">›</span>
-        </a>
-        <p class="cta-note">
-          Hylaronic.com may use affiliate links. Rankings are independent and not for sale.
-        </p>
-      </div>
+    <!-- DISCLOSURE -->
+    <section class="disclaimer">
+      <p>
+        <strong>Affiliate disclosure:</strong> Some product links on this page are affiliate links. If you buy through them,
+        we may earn a small commission at no extra cost to you. We do not accept payment for positive coverage or rankings.
+      </p>
+      <p>
+        This site is educational. For side-by-side shopping comparisons and more product coverage, use
+        <a href="https://hylaronic.com/" target="_blank" rel="noopener"
+           data-track="outbound" data-placement="disclaimer" data-label="hylaronic_compare">
+          Hylaronic.com
+        </a>.
+      </p>
     </section>
+
   </main>
 
-  <!-- FOOTER -->
-    <footer class="site-footer">
-  <span>© <span id="year"></span> Hyaluronic.bio – Evidence-based hyaluronic acid education.</span>
-  <span>Operated by ronarn AS, Norway. Independent information site with links to Hylaronic.com.</span>
-  <span>Contact: <a href="mailto:info@hyaluronic.bio">info@hyaluronic.bio</a></span>
-  <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+  <!-- FOOTER (your standard footer) -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <span>© <span id="year"></span> Hyaluronic.bio – Evidence-based hyaluronic acid education.</span>
+      <span>Operated by ronarn AS, Norway. Independent information site with links to Hylaronic.com.</span>
+      <span>Contact: <a href="mailto:info@hyaluronic.bio">info@hyaluronic.bio</a></span>
+      <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+    </div>
 
-  <!-- Local pages -->
-  <span>
-    <a href="/privacy.html">Privacy &amp; Cookies</a> ·
-    <a href="/about.html">About Hyaluronic.bio</a> ·
-    <a href="https://hylaronic.com/" target="_blank" rel="noopener">
-      Hylaronic.com – Product comparison
-    </a>
-  </span>
+    <nav class="footer-links">
+      <span>
+        <a href="https://privacypolicy.bio" target="_blank" rel="noopener">Privacy Policy</a> ·
+        <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a> ·
+        <a href="https://disclaimer.bio" target="_blank" rel="noopener">Medical &amp; Affiliate Disclaimer</a> ·
+        <a href="https://disclosure.bio" target="_blank" rel="noopener">Affiliate Disclosure</a> ·
+        <a href="https://policies.bio" target="_blank" rel="noopener">Policies</a> ·
+        <a href="https://transparency.bio" target="_blank" rel="noopener">Transparency</a>
+      </span>
+    </nav>
 
-  <!-- Global policy network for authority & compliance -->
-  <span>
-    <a href="https://privacypolicy.bio" target="_blank" rel="noopener">Global Privacy Policy</a> ·
-    <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a> ·
-    <a href="https://disclaimer.bio" target="_blank" rel="noopener">Medical &amp; Affiliate Disclaimer</a> ·
-    <a href="https://disclosure.bio" target="_blank" rel="noopener">Affiliate Disclosure</a> ·
-    <a href="https://policies.bio" target="_blank" rel="noopener">Policies</a> ·
-    <a href="https://transparency.bio" target="_blank" rel="noopener">Transparency</a>
-  </span>
-
-  <!-- Governance / verification / editorial -->
-  <span>
-    <a href="https://organization.bio" target="_blank" rel="noopener">About the Publisher</a> ·
-    <a href="https://contactus.bio" target="_blank" rel="noopener">Network Contact</a> ·
-    <a href="https://affiliates.bio" target="_blank" rel="noopener">Affiliates</a> ·
-    <a href="https://advertisement.bio" target="_blank" rel="noopener">Advertisements</a> ·
-    <a href="https://guides.bio" target="_blank" rel="noopener">Editorial Guides</a> ·
-    <a href="https://ethics.bio" target="_blank" rel="noopener">Ethics</a> ·
-    <a href="https://standards.bio" target="_blank" rel="noopener">Standards</a> ·
-    <a href="https://indexing.bio" target="_blank" rel="noopener">Indexing</a> ·
-    <a href="https://verification.bio" target="_blank" rel="noopener">Verification</a> ·
-    <a href="https://authorities.bio" target="_blank" rel="noopener">Authorities</a> ·
-    <a href="https://audits.bio" target="_blank" rel="noopener">Audits</a>
-  </span>
-</footer>
-
-
+    <nav class="footer-links">
+      <span>
+        <a href="https://organization.bio" target="_blank" rel="noopener">About the Publisher</a> ·
+        <a href="https://contactus.bio" target="_blank" rel="noopener">Contact</a> ·
+        <a href="https://affiliates.bio" target="_blank" rel="noopener">Affiliates</a> ·
+        <a href="https://advertisement.bio" target="_blank" rel="noopener">Advertisements</a> ·
+        <a href="https://guides.bio" target="_blank" rel="noopener">Editorial Guides</a> ·
+        <a href="https://ethics.bio" target="_blank" rel="noopener">Ethics</a> ·
+        <a href="https://standards.bio" target="_blank" rel="noopener">Editorial Standards</a> ·
+        <a href="https://audits.bio" target="_blank" rel="noopener">Audits</a> ·
+        <a href="https://verification.bio" target="_blank" rel="noopener">Verification</a> ·
+        <a href="https://indexing.bio" target="_blank" rel="noopener">Indexing</a> ·
+        <a href="https://hylaronic.com/" target="_blank" rel="noopener">Hylaronic.com – Product comparison</a>
+      </span>
+    </nav>
+  </footer>
 
 </div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Click tracking (same philosophy as Retinol.bio)
+  (function () {
+    function safeGtag(){ return (typeof window.gtag === "function"); }
+    function fireEvent(name, params){
+      if (!safeGtag()) return;
+      try { window.gtag("event", name, params || {}); } catch(e) {}
+    }
+
+    document.addEventListener("click", function (e) {
+      const a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+
+      const href = a.getAttribute("href") || "";
+      const trackType = a.getAttribute("data-track") || "";
+      const placement = a.getAttribute("data-placement") || "unknown";
+      const label = a.getAttribute("data-label") || "";
+      const product = a.getAttribute("data-product") || "";
+      const destination = a.getAttribute("data-destination") || "";
+
+      if (trackType === "affiliate") {
+        fireEvent("affiliate_click", {
+          product: product || "unknown",
+          placement: placement,
+          destination: destination || "unknown",
+          link_text: (a.textContent || "").trim().slice(0, 80)
+        });
+        return;
+      }
+
+      const isOutbound = href.startsWith("http://") || href.startsWith("https://") || href.startsWith("//");
+      const isSameDomain = href.includes("hyaluronic.bio") || href.startsWith("/") || href.startsWith("#");
+
+      if ((trackType === "outbound") || (isOutbound && !isSameDomain && !href.includes("hyaluronic.bio"))) {
+        fireEvent("outbound_click", { placement: placement, label: label || "outbound", url: href });
+        return;
+      }
+
+      if (trackType === "jump") {
+        fireEvent("jump_click", { placement: placement, label: label || href });
+        return;
+      }
+    }, { passive: true });
+  })();
 </script>
+
 </body>
 </html>
